@@ -134,15 +134,19 @@ int main(int argc, const char *argv[])
         vector<cv::KeyPoint> keypointsVehicle; 
         if (bFocusOnVehicle)
         {
-            for (vector<cv::KeyPoint>::iterator it = keypoints.begin(); it != keypoints.end(); ++it)
+            for (vector<cv::KeyPoint>::iterator it = keypoints.begin(); it < keypoints.end(); /* do nothing */)
             {
                 if (vehicleRect.contains(it->pt))
                 {
-                    keypointsVehicle.push_back(*it);
+                    ++it;
+                }
+                else
+                {
+                    it = keypoints.erase(it);
                 }
             }
         }
-        cout << "Number of keypoints on the preceding vehicle: " << keypointsVehicle.size() << endl; 
+        cout << "Number of keypoints on the preceding vehicle: " << keypoints.size() << endl; 
 
         //// EOF STUDENT ASSIGNMENT
         return 0; 
@@ -173,6 +177,11 @@ int main(int argc, const char *argv[])
 
         cv::Mat descriptors;
         string descriptorType = "BRISK"; // BRIEF, ORB, FREAK, AKAZE, SIFT
+        // string descriptorType = "BRIEF"; 
+        // string descriptorType = "ORB"; 
+        // string descriptorType = "FREAK"; 
+        // string descriptorType = "AKAZE"; 
+        // string descriptorType = "SIFT"; 
         descKeypoints((dataBuffer.end() - 1)->keypoints, (dataBuffer.end() - 1)->cameraImg, descriptors, descriptorType);
         //// EOF STUDENT ASSIGNMENT
 
