@@ -149,7 +149,6 @@ int main(int argc, const char *argv[])
         cout << "Number of keypoints on the preceding vehicle: " << keypoints.size() << endl; 
 
         //// EOF STUDENT ASSIGNMENT
-        return 0; 
 
         // optional : limit number of keypoints (helpful for debugging and learning)
         bool bLimitKpts = false;
@@ -182,6 +181,7 @@ int main(int argc, const char *argv[])
         // string descriptorType = "FREAK"; 
         // string descriptorType = "AKAZE"; 
         // string descriptorType = "SIFT"; 
+        
         descKeypoints((dataBuffer.end() - 1)->keypoints, (dataBuffer.end() - 1)->cameraImg, descriptors, descriptorType);
         //// EOF STUDENT ASSIGNMENT
 
