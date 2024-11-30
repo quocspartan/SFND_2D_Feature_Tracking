@@ -30,8 +30,10 @@ void matchDescriptors(std::vector<cv::KeyPoint> &kPtsSource, std::vector<cv::Key
     // perform matching task
     if (selectorType.compare("SEL_NN") == 0)
     { // nearest neighbor (best match)
-
+        double t = (double)cv::getTickCount();
         matcher->match(descSource, descRef, matches); // Finds the best match for each descriptor in desc1
+        t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
+        cout << " (NN) with n=" << matches.size() << " matches in " << 1000 * t / 1.0 << " ms" << endl;
     }
     else if (selectorType.compare("SEL_KNN") == 0)
     { // k nearest neighbors (k=2)
@@ -49,6 +51,8 @@ void matchDescriptors(std::vector<cv::KeyPoint> &kPtsSource, std::vector<cv::Key
                 matches.push_back((*it)[0]);
             }
         }
+        cout << "Number of keypoints matches after filtering is n = " << matches.size() << endl; 
+        cout << "Number of keypoints filtered out = " << knn_matches.size() - matches.size() << endl; 
     }
 }
 
