@@ -44,23 +44,23 @@ int main(int argc, const char *argv[])
     bool bVis = false;            // visualize results
 
     /* MAIN LOOP OVER ALL IMAGES */
-    string detectorType = "SHITOMASI";
+    // string detectorType = "SHITOMASI";
     // string detectorType = "HARRIS";
     // string detectorType = "FAST";
     // string detectorType = "BRISK";
     // string detectorType = "ORB";
     // string detectorType = "AKAZE";
-    // string detectorType = "SIFT";
+    string detectorType = "SIFT";
 
-    string descriptorType = "BRISK"; // BRIEF, ORB, FREAK, AKAZE, SIFT
+    // string descriptorType = "BRISK"; // BRIEF, ORB, FREAK, AKAZE, SIFT
     // string descriptorType = "BRIEF"; 
     // string descriptorType = "ORB"; 
     // string descriptorType = "FREAK"; 
     // string descriptorType = "AKAZE"; 
-    // string descriptorType = "SIFT"; 
+    string descriptorType = "SIFT"; 
 
     string matcherType = "MAT_BF";           // MAT_BF, MAT_FLANN
-    string matcherDescriptorType = "DES_BINARY";       // DES_BINARY, DES_HOG
+    string matcherDescriptorType = "DES_HOG";       // DES_BINARY, DES_HOG
     string selectorType = "SEL_KNN";             // SEL_NN, SEL_KNN
 
     vector<std::size_t> keypointsPrecedingVeh;
@@ -252,7 +252,7 @@ int main(int argc, const char *argv[])
     // Report summary
     cout << "==============================================================================================================================" << endl; 
     cout << "==============================================================================================================================" << endl; 
-    cout << "Img Idx  ; Detector Type  ; Descriptor Type  ; Num keypoints  ; Detector Time (ms)  ; Extractor Time (ms)  ; Matched keypoints" << endl;
+    cout << "Img Idx  ; Detector Type  ; Descriptor Type  ; Detector Time (ms)  ; Extractor Time (ms)  ; Matched keypoints" << endl;
     for (std::size_t i = 0; i < 10; i++)
     {
         cout << std::left << std::setw(9) << i << ";"; 
@@ -260,8 +260,8 @@ int main(int argc, const char *argv[])
         cout << std::setw(15) << detectorType << ";"; 
         cout << " "; //spacing
         cout << std::setw(17) << descriptorType << ";";
-        cout << " "; //spacing
-        cout << std::setw(15) << keypointsPrecedingVeh.at(i) << ";"; 
+        // cout << " "; //spacing
+        // cout << std::setw(15) << keypointsPrecedingVeh.at(i) << ";"; 
         cout << " "; //spacing
         cout << std::setw(20) << fixed << setprecision(6) << timeKeypointsDetector.at(i) * 1000 << ";";
         cout << " "; //spacing
