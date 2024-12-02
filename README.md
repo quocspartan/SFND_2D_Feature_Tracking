@@ -120,26 +120,27 @@ Img. Id. 8     | 111         | 26          | 138         | 266         | 127    
 Img. Id. 9     | 112         | 34          | 143         | 254         | 128         | 179         | 137         
 
 ### MP.8 Performance Evaluation 2
-In the table bellow we see the total number of matched keypoints for all 9 match instances using all possible detector-descriptor combinations. In the horizontal axis the descriptors are listed, and in the vertical the detectors.  
+The below table shows the number of average matched keypoints for all 9 match instances using all possible detector-descriptor combinations. 
+
 Descriptor/Detector Type  |     BRISK   |     BRIEF   |      ORB    |     FREAK   |     AKAZE   |  SIFT 
 -------------             | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: 
-SHITOMASI                 | 81          | 89          | 85          | 63          | N.A.        | 68         
-HARRIS                    | 13          | 16          | 16          | 13          | N.A.        | 14          
-FAST                      | 87          | 98          | 96          | 71          | N.A.        | 81         
-BRISK                     | 90          | 90          | 69          | 78          | N.A.        | 42         
-ORB                       | 81          | 52          | 59          | 40          | N.A.        | 47         
-AKAZE                     | 124         | 121         | 103         |108          | 140         | 97         
-SIFT                      | 60          |  65         | N.A.        | 53          | N.A.        | 51         
+SHITOMASI                 | 85          | 104         | 101         | 85          | N.A.        | 118         
+HARRIS                    | 16          | 19          | 18          | 16          | N.A.        | 18          
+FAST                      | 86          | 98          | 95          | 73          | N.A.        | 116         
+BRISK                     | 144         | 149         | 101         | 121         | N.A.        | 182         
+ORB                       | 72          | 50          | 57          | 38          | N.A.        | 84         
+AKAZE                     | 123         | 120         | 102         |107          | 130         | 141         
+SIFT                      | 59          | 66          | N.A.        |138          | N.A.        | 138         
 
 ### MP.9 Performance Evaluation 3
-In the table bellow we see the average processing time for all detector-descriptor combination applied and averaged on all 10 input images. In the horizontal axis the descriptors are listed, and in the vertical the detectors. Based on these results we can make a proposition that the top 3 fastest detector-descriptor combinations are: FAST + BRIEF, FAST + ORB, FAST + SIFT. 
+The below table shows the average processing time for all detector-descriptor combination applied and averaged on all 10 input images. And the top 3 fastest detector-descriptor combinations are: FAST + BRIEF, FAST + ORB, FAST + BRISK. 
 
 Descriptor/Detector Type  |     BRISK   |     BRIEF   |      ORB    |     FREAK   |     AKAZE   |  SIFT 
 -------------             | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: 
-SHITOMASI                 | 44.9067     | 21.992      | 17.8674     | 34.1482     | N.A.        | 21.7399         
-HARRIS                    | 39.4661     | 15.5394     | 18.4634     | 34.9929     | N.A.        | 21.5843         
-FAST                      | 26.8315     | 2.95946     | 5.83626     | 23.9629     | N.A.        | 14.1271         
-BRISK                     | 65.4532     | 43.3297     | 57.4566     | 61.351      | N.A.        | 62.7616         
-ORB                       | 45.7163     | 23.4924     | 38.2593     | 41.8519     | N.A.        | 52.4007        
-AKAZE                     | 81.7695     | 59.1585     | 65.3632     | 75.1802     | 96.4652     | 67.0839         
-SIFT                      | 96.7775     | 72.9121     | N.A.        | 90.2254     | N.A.        | 117.035     
+SHITOMASI                 | 18.2692     | 20.8301     | 23.7505     | 47.2676     | N.A.        | 38.3186         
+HARRIS                    | 16.8764     | 20.0132     | 23.5778     | 46.1268     | N.A.        | 38.6313         
+FAST                      | 2.5276      | 2.5742      | 5.5745      | 30.4137     | N.A.        | 19.0452         
+BRISK                     | 36.7178     | 36.9879     | 44.8616     | 59.0667     | N.A.        | 53.8333         
+ORB                       | 31.9859     | 32.0033     | 51.3630     | 60.1264     | N.A.        | 65.8400        
+AKAZE                     | 66.3685     | 70.7968     | 75.4172     | 95.5817     | 130.7667    | 82.5465        
+SIFT                      | 82.0138     | 99.4756     | N.A.        | 126.3014    | N.A.        | 137.5032     
