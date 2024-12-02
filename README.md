@@ -27,7 +27,7 @@ See the classroom instruction and code comments for more details on each of thes
 [image12]: ./media/FAST_and_ORB.png "FAST and ORB"
 [image13]: ./media/BRISK_and_SIFT.png "BRISK and SIFT"
 [image14]: ./media/ORB_and_ORB.png "ORB and ORB"
-[image15]: ./media/AKAZE_AND_AKAZE.png "AKAZE and AKAZE"
+[image15]: ./media/AKAZE_and_AKAZE.png "AKAZE and AKAZE"
 
 ## Dependencies for Running Locally
 1. cmake >= 2.8
