@@ -19,7 +19,7 @@ See the classroom instruction and code comments for more details on each of thes
 [image4]: ./media/Brisk_detector.png "Brisk"
 [image5]: ./media/Fast_detector.png "Fast"
 [image6]: ./media/Harris_corner_detector.png "Harris"
-[image7]: ./media/ORB_detector.png "ORB"
+[image7]: ./media/ORB_Detector.png "ORB"
 [image8]: ./media/Shi_Tomasi_detector.png "ShiTomasi"
 [image9]: ./media/SIFT_detector.png "SIFT"
 [image10]: ./media/ORB_AND_ORB.png "ORB and ORB"
