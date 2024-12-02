@@ -47,10 +47,10 @@ int main(int argc, const char *argv[])
     // string detectorType = "SHITOMASI";
     // string detectorType = "HARRIS";
     // string detectorType = "FAST";
-    string detectorType = "BRISK";
+    // string detectorType = "BRISK";
     // string detectorType = "ORB";
     // string detectorType = "AKAZE";
-    // string detectorType = "SIFT";
+    string detectorType = "SIFT";
 
     // string descriptorType = "BRISK"; // BRIEF, ORB, FREAK, AKAZE, SIFT
     // string descriptorType = "BRIEF"; 

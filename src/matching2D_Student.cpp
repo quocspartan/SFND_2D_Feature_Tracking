@@ -303,7 +303,7 @@ void detKeypointsAKAZE(vector<cv::KeyPoint> &keypoints, cv::Mat &img, double &t,
 // Detect keypoints in image using the Harris detector
 void detKeypointsSIFT(vector<cv::KeyPoint> &keypoints, cv::Mat &img, double &t, bool bVis)
 {
-    cv::Ptr<cv::FeatureDetector> detector = cv::AKAZE::create();
+    cv::Ptr<cv::FeatureDetector> detector = cv::xfeatures2d::SIFT::create();
     t = (double)cv::getTickCount();
     detector->detect(img, keypoints);
     t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();

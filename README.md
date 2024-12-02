@@ -96,21 +96,28 @@ The following keypoint descriptors are implemented: BRISK, BRIEF, ORB, FREAK, AK
 ### MP.5 Descriptor Matching
 The following matchers implemented in this project: FLANN and Brute Force. And the available selectors are: Nearest Neighbor and K-Nearest Neighbor (with the KNN being calibrated to two best matches).
 
+![alt text][image12]
+
 ### MP.6 Descriptor Distance Ratio
 In the implementation the threshold values is set to 0.8
 
-### MP.7 Performance Evaluation 1
-In the table bellow we have the number of keypoints detected for the preceding vehicle for all 10 images and for all the detector types. Based on this data the three detectors that have returned the most keypoints are: AKAZE, BRISK and FAST.
+![alt text][image15]
 
-Detector Type  |  Img. No. 1 |  Img. No. 2 |  Img. No. 3 |  Img. No. 4 |  Img. No. 5 |  Img. No. 6 |  Img. No. 7 |  Img. No. 8 |  Img. No. 9 |  Img. No. 10
--------------  | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: | :---------:
-SHITOMASI      | 125         | 118         | 123         | 120         | 120         | 113         | 114         | 123         | 111         | 111
-HARRIS         | 17          | 14          | 18          | 21          | 26          | 43          | 18          | 31          | 26          | 34
-FAST           | 149         | 152         | 150         | 155         | 149         | 149         | 156         | 150         | 138         | 143
-BRISK          | 160         | 164         | 158         | 162         | 159         | 156         | 161         | 155         | 160         | 142
-ORB            | 92          | 102         | 106         | 113         | 109         | 125         | 130         | 129         | 127         | 128
-AKAZE          | 166         | 157         | 161         | 155         | 163         | 164         | 173         | 175         | 177         | 179
-SIFT           | 138         | 132         | 124         | 137         | 134         | 140         | 137         | 148         | 159         | 137
+### MP.7 Performance Evaluation 1
+In the table bellow we have the number of keypoints detected for the preceding vehicle for all 10 images and for all the detector types. And the three detectors that have returned the most keypoints are: BRISK, AKAZE and FAST.
+
+Image index    |  SHITOMASI  |    HARRIS   |     FAST    |     BRISK   |     ORB     |    AKAZE    |   SIFT 
+-------------  | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: | :---------: 
+Img. Id. 0     | 125         | 17          | 149         | 264         | 92          | 166         | 138         
+Img. Id. 1     | 118         | 14          | 152         | 282         | 102         | 157         | 132         
+Img. Id. 2     | 123         | 18          | 150         | 182         | 106         | 161         | 124         
+Img. Id. 3     | 120         | 21          | 155         | 277         | 113         | 155         | 137         
+Img. Id. 4     | 120         | 26          | 149         | 297         | 109         | 163         | 134        
+Img. Id. 5     | 113         | 43          | 149         | 279         | 125         | 164         | 140         
+Img. Id. 6     | 114         | 18          | 156         | 289         | 130         | 173         | 137         
+Img. Id. 7     | 123         | 31          | 150         | 272         | 129         | 175         | 148         
+Img. Id. 8     | 111         | 26          | 138         | 266         | 127         | 177         | 159         
+Img. Id. 9     | 112         | 34          | 143         | 254         | 128         | 179         | 137         
 
 ### MP.8 Performance Evaluation 2
 In the table bellow we see the total number of matched keypoints for all 9 match instances using all possible detector-descriptor combinations. In the horizontal axis the descriptors are listed, and in the vertical the detectors.  
